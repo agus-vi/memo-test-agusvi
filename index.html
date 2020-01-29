@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="node_modules\bootstrap\dist\css\bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
+    <title>MemoTest LoL</title>
 </head>
 <body>
     <div class="container">
@@ -16,17 +16,18 @@
                 Bienvenido al memo test Agusvi
               </div>
           </div>
-          <div class="col-sm-4">
-            <strong>Tiempo: </strong>  
+          <div class="col-sm-4 time">
+            
+            <p>Tiempo: <strong id="time">0</strong></p>
           </div>
           <div class="col-sm-2">
             <button type="button" class="btn btn-dark" id="boton-jugar">Jugar</button>
         </div>
       </div>
 
+      <div class="tablero">
         <!-- FILA 1 -->
-
-        <div class="row">
+        <div class="row fila-juego">
           <div class="col carta" >
             <div class=back><img src="images/lol.png" alt=back class="img-thumbnail"></div>
             <div class="front"></div>
@@ -45,11 +46,8 @@
           </div>
         
         </div>
-
         <!-- FILA 2 -->
-
-
-        <div class="row">
+        <div class="row fila-juego">
             <div class="col carta" >
               <div class="back"><img src="images/lol.png" alt="" class="img-thumbnail"></div>
               <div class="front"></div>
@@ -69,7 +67,7 @@
         </div>
       <!-- FILA 3 -->
 
-      <div class="row">
+      <div class="row fila-juego">
           <div class="col carta" >
             <div class="back"><img src="images/lol.png" alt="" class="img-thumbnail"></div>
             <div class="front"></div>
@@ -87,7 +85,7 @@
             <div class="front"></div>
           </div>
       </div>
-          
+    </div>      
   
       
       <script src="memo-test.js"></script>

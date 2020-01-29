@@ -1,4 +1,7 @@
 $botonJugar = document.querySelector("#boton-jugar");
+$tiempo = document.querySelector('#time');
+
+
 const imagenes = {
     "carta-1": "images/Bard.png",
     "carta-2": "images/Ashe.png",
@@ -16,6 +19,7 @@ const imagenes = {
 
 $botonJugar.onclick = function(){
     comienzoJuego();
+    startTimer();
 };
 
 function comienzoJuego(){
@@ -55,7 +59,7 @@ function voltearCarta(e){
                 cartasTocadas[1].src = "images/lol.png";
                 cartasTocadas = [];
                 desbloquearInputUsuario();
-            }, 1000);
+            }, 500);
             
         } else {
             desbloquearInputUsuario();
@@ -81,6 +85,17 @@ function bloquearInputUsuario() {
        $carta.onclick = voltearCarta;
     });
     }
+
+function startTimer() {
+    let timer = 0;
+    setInterval(function () {
+        timer++;
+        $tiempo.innerHTML = timer;
+    }, 1000);
+}
+    
+    
+
 
 function comprobarIguales(){
 
